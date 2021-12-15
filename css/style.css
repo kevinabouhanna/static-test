@@ -7,6 +7,7 @@
     --purple-light: #bd7f9e;
     --offset: 16px;
     --divider: #D6D6D6;
+    --expand-collapse: #959595;
 }
 
 body {
@@ -426,7 +427,7 @@ template {
     text-align: left;
 }
 
-.icon {
+.faq-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -439,32 +440,32 @@ template {
     border-radius: 100%;
 }
 
-.icon:before {
+.faq-icon:before {
     content: "";
     position: absolute;
-    width: 14px;
-    height: 2px;
-    background-color: #545d7a;
+    height: 4px;
+    width: 30px;
+    background-color: var(--expand-collapse);
     border-radius: 20px;
     pointer-events: all;
     transition: all 0.3s ease-in-out;
 }
 
-.icon:after {
+.faq-icon:after {
     content: "";
     position: absolute;
-    width: 2px;
-    height: 14px;
-    background-color: #545d7a;
+    width: 4px;
+    height: 30px;
+    background-color: var(--expand-collapse);
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
 }
 
-.accordion-item-header.active>.icon::before {
+.accordion-item-header.active>.faq-icon::before {
     transform: rotate(180deg);
 }
 
-.accordion-item-header.active>.icon::after {
+.accordion-item-header.active>.faq-icon::after {
     transform: rotate(90deg);
 }
 
