@@ -1,18 +1,20 @@
 :root {
     --primary-text: #10182f;
-    --dark-white: #e6e7e8;
+    --body-background: #F8F8F8;
     --orange: #ce8062;
     --light-blue: #a5c7d4;
     --blue: #287ec2;
     --purple-light: #bd7f9e;
     --offset: 16px;
     --divider: #D6D6D6;
-    --expand-collapse: #959595;
+    --faq-expand-collapse: #959595;
+    --faq-text: #898888;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--body-background);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -366,7 +368,6 @@ template {
     grid-template-rows: auto;
     place-items: center;
     row-gap: 10em;
-    background-color: var(--dark-white);
 }
 
 .content {
@@ -422,8 +423,11 @@ template {
 
 .accordion-item-body-content {
     width: 80%;
-    padding: 1em 0;
-    color: var(--primary-text);
+    padding-bottom: 3em;
+    color: var(--faq-text);
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.9rem;
     text-align: left;
 }
 
@@ -445,7 +449,7 @@ template {
     position: absolute;
     height: 4px;
     width: 30px;
-    background-color: var(--expand-collapse);
+    background-color: var(--faq-expand-collapse);
     border-radius: 20px;
     pointer-events: all;
     transition: all 0.3s ease-in-out;
@@ -456,7 +460,7 @@ template {
     position: absolute;
     width: 4px;
     height: 30px;
-    background-color: var(--expand-collapse);
+    background-color: var(--faq-expand-collapse);
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
 }
@@ -475,23 +479,6 @@ template {
     background-color: var(--divider);
 }
 
-.faq-button {
-    display: block;
-    margin-top: 1.2em;
-    padding: 0.6em 1.8em;
-    border-radius: 30px;
-    color: var(--primary-text);
-    background: none;
-    font-weight: 700;
-    border: 2px solid var(--divider);
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-}
-
-.faq-button:hover {
-    background-color: var(--divider);
-}
-
 /* form component */
 .form__section {
     width: 100%;
@@ -499,16 +486,14 @@ template {
 
 .careers-form {
     display: flex;
-    width: 100%;
+    width: calc(100% - var(--offset));
     max-width: 1020px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 2.5em;
-    padding: 0 var(--offset);
     margin: 0 auto;
     padding-bottom: 6.25em;
-    /** Here the page bottom padding */
 }
 
 .careers-form__title-container {
