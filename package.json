@@ -1,0 +1,23 @@
+{
+  "name": "kevin_abou_hanna",
+  "version": "1.0.0",
+  "description": "MyMonty",
+  "repository": "github:kevinabouhanna/abouhanna",
+  "homepage": "https://abouhanna.com",
+  "keywords": [
+    "Neobank",
+    "Bank",
+    "Virtual Bank",
+    "MyMonty"
+  ],
+  "license": "MIT",
+  "author": "MyMonty",
+  "browserslist": ">0.75%, not ie 11, not UCAndroid >0, not OperaMini all",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "devDependencies": {
+    "snowpack": "^3.8.8"
+  }
+}
